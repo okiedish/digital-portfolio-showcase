@@ -3,67 +3,95 @@ import Footer from "@/components/Footer";
 import DownloadButton from "@/components/DownloadButton";
 
 const Resume = () => {
-  const experiences = [
+  const education = [
     {
-      title: "Senior Software Engineer",
-      company: "Tech Innovations Inc.",
+      degree: "Bachelor of Science in Computer Science",
+      school: "Stanford University",
+      location: "Stanford, CA",
+      period: "2022 - 2026 (Expected)",
+      details: "GPA: 3.9/4.0 | Dean's List all semesters | Minor in Mathematics",
+      courses: ["Data Structures & Algorithms", "Machine Learning", "Database Systems", "Web Development", "Computer Networks"],
+    },
+    {
+      degree: "High School Diploma",
+      school: "Lincoln High School",
       location: "San Francisco, CA",
-      period: "2021 - Present",
+      period: "2018 - 2022",
+      details: "Valedictorian | GPA: 4.0/4.0 | National Honor Society",
+      courses: ["AP Computer Science", "AP Calculus BC", "AP Physics"],
+    },
+  ];
+
+  const projects = [
+    {
+      title: "E-Commerce Platform",
+      tech: "React, Node.js, MongoDB, Stripe",
+      period: "2024",
       description: [
-        "Lead a team of 8 engineers in developing scalable microservices architecture",
-        "Reduced system latency by 40% through optimization of database queries and caching strategies",
-        "Implemented CI/CD pipelines that decreased deployment time by 60%",
-        "Mentored junior developers and conducted code reviews to maintain code quality",
+        "Built a full-stack e-commerce website with user authentication and payment processing",
+        "Implemented responsive design using Tailwind CSS for optimal mobile experience",
+        "Integrated Stripe API for secure payment handling",
+        "Deployed on AWS with CI/CD pipeline using GitHub Actions",
       ],
     },
     {
-      title: "Software Engineer",
-      company: "Digital Solutions Corp",
-      location: "San Jose, CA",
-      period: "2018 - 2021",
+      title: "AI-Powered Study Assistant",
+      tech: "Python, TensorFlow, Flask, React",
+      period: "2024",
       description: [
-        "Developed RESTful APIs serving 2M+ daily active users",
-        "Built real-time data processing pipelines using Apache Kafka",
-        "Collaborated with product teams to deliver features on time",
-        "Wrote comprehensive unit and integration tests achieving 90% coverage",
+        "Developed an NLP-based chatbot to help students with homework questions",
+        "Trained custom model on educational datasets achieving 85% accuracy",
+        "Created intuitive frontend interface for seamless user interaction",
+        "Won 2nd place at Stanford Hackathon 2024",
       ],
     },
     {
-      title: "Junior Developer",
-      company: "StartUp Labs",
-      location: "Palo Alto, CA",
-      period: "2016 - 2018",
+      title: "Campus Event Finder",
+      tech: "React Native, Firebase, Google Maps API",
+      period: "2023",
       description: [
-        "Created responsive web applications using React and Node.js",
-        "Participated in agile ceremonies and sprint planning",
-        "Integrated third-party APIs for payment and analytics",
-        "Contributed to documentation and knowledge base",
+        "Created cross-platform mobile app for discovering campus events",
+        "Implemented real-time notifications and event reminders",
+        "Integrated Google Maps for event location and navigation",
+        "Over 500 active users within the university",
       ],
     },
   ];
 
-  const education = [
+  const achievements = [
+    "Dean's List - All Semesters (2022-Present)",
+    "Stanford Hackathon 2024 - 2nd Place",
+    "Google Code Jam 2023 - Round 2 Qualifier",
+    "ACM ICPC Regional - Honorable Mention",
+    "National Merit Scholar Finalist",
+  ];
+
+  const extracurriculars = [
     {
-      degree: "Master of Science in Computer Science",
-      school: "Stanford University",
-      location: "Stanford, CA",
-      period: "2014 - 2016",
-      details: "Specialized in Distributed Systems and Machine Learning. GPA: 3.9/4.0",
+      role: "Vice President",
+      org: "Stanford Computer Science Club",
+      period: "2023 - Present",
+      desc: "Organize workshops, hackathons, and tech talks for 200+ members",
     },
     {
-      degree: "Bachelor of Science in Computer Engineering",
-      school: "University of California, Berkeley",
-      location: "Berkeley, CA",
-      period: "2010 - 2014",
-      details: "Dean's List all semesters. Minor in Mathematics. GPA: 3.8/4.0",
+      role: "Teaching Assistant",
+      org: "CS 101: Introduction to Programming",
+      period: "2023 - Present",
+      desc: "Assist professor in grading and conducting office hours for 150 students",
+    },
+    {
+      role: "Volunteer Developer",
+      org: "Code for America",
+      period: "2022 - Present",
+      desc: "Contribute to open-source civic technology projects",
     },
   ];
 
   const certifications = [
-    "AWS Solutions Architect Professional",
-    "Google Cloud Professional Data Engineer",
-    "Certified Kubernetes Administrator (CKA)",
-    "MongoDB Certified Developer",
+    "AWS Certified Cloud Practitioner",
+    "Google IT Support Professional Certificate",
+    "Meta Front-End Developer Certificate",
+    "freeCodeCamp Full Stack Development",
   ];
 
   return (
@@ -77,7 +105,7 @@ const Resume = () => {
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
               <div className="animate-fade-in-up">
                 <h1 className="section-title mb-2">My <span className="gold-accent">Resume</span></h1>
-                <p className="section-subtitle">Professional experience & education</p>
+                <p className="section-subtitle">Education, projects & achievements</p>
               </div>
               <div className="animate-fade-in delay-200">
                 <DownloadButton targetId="resume-content" filename="john-doe-resume" />
@@ -92,7 +120,7 @@ const Resume = () => {
             {/* Resume Header */}
             <header className="text-center border-b-2 border-gold pb-8 mb-8">
               <h2 className="font-display text-4xl font-bold text-primary mb-2">John Doe</h2>
-              <p className="font-body text-lg text-accent mb-4">Senior Software Engineer</p>
+              <p className="font-body text-lg text-accent mb-4">Computer Science Student</p>
               <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground font-body">
                 <span className="flex items-center gap-1">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -116,47 +144,18 @@ const Resume = () => {
               </div>
             </header>
 
-            {/* Professional Summary */}
+            {/* Objective */}
             <section className="mb-10">
               <h3 className="font-display text-xl font-semibold text-primary mb-4 flex items-center gap-2">
                 <span className="w-8 h-0.5 bg-gold"></span>
-                Professional Summary
+                Objective
               </h3>
               <p className="font-body text-foreground leading-relaxed">
-                Results-driven Senior Software Engineer with 8+ years of experience in designing, 
-                developing, and deploying scalable software solutions. Proven track record of 
-                leading cross-functional teams and delivering high-quality products that drive 
-                business growth. Expert in full-stack development, cloud architecture, and agile 
-                methodologies.
+                Motivated Computer Science student seeking a software engineering internship where 
+                I can apply my programming skills, contribute to meaningful projects, and gain 
+                hands-on experience in a collaborative environment. Passionate about web development, 
+                machine learning, and creating user-centric solutions.
               </p>
-            </section>
-
-            {/* Work Experience */}
-            <section className="mb-10">
-              <h3 className="font-display text-xl font-semibold text-primary mb-6 flex items-center gap-2">
-                <span className="w-8 h-0.5 bg-gold"></span>
-                Work Experience
-              </h3>
-              <div className="space-y-8">
-                {experiences.map((exp, index) => (
-                  <article key={index} className="relative pl-6 border-l-2 border-border hover:border-gold transition-colors">
-                    <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gold border-4 border-card"></div>
-                    <div className="mb-2">
-                      <h4 className="font-display text-lg font-semibold text-foreground">{exp.title}</h4>
-                      <p className="font-body text-accent font-medium">{exp.company}</p>
-                      <div className="flex flex-wrap gap-4 text-sm text-muted-foreground font-body mt-1">
-                        <span>{exp.location}</span>
-                        <span className="text-gold">{exp.period}</span>
-                      </div>
-                    </div>
-                    <ul className="list-disc list-inside space-y-1 font-body text-foreground text-sm">
-                      {exp.description.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
-                  </article>
-                ))}
-              </div>
             </section>
 
             {/* Education */}
@@ -176,9 +175,74 @@ const Resume = () => {
                       <span className="text-gold">{edu.period}</span>
                     </div>
                     <p className="font-body text-foreground text-sm mt-2">{edu.details}</p>
+                    <div className="mt-2">
+                      <p className="font-body text-sm text-muted-foreground">Relevant Courses:</p>
+                      <p className="font-body text-sm text-foreground">{edu.courses.join(" • ")}</p>
+                    </div>
                   </article>
                 ))}
               </div>
+            </section>
+
+            {/* Projects */}
+            <section className="mb-10">
+              <h3 className="font-display text-xl font-semibold text-primary mb-6 flex items-center gap-2">
+                <span className="w-8 h-0.5 bg-gold"></span>
+                Projects
+              </h3>
+              <div className="space-y-8">
+                {projects.map((project, index) => (
+                  <article key={index} className="relative pl-6 border-l-2 border-border hover:border-gold transition-colors">
+                    <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gold border-4 border-card"></div>
+                    <div className="mb-2">
+                      <h4 className="font-display text-lg font-semibold text-foreground">{project.title}</h4>
+                      <p className="font-body text-accent font-medium text-sm">{project.tech}</p>
+                      <span className="text-sm text-gold font-body">{project.period}</span>
+                    </div>
+                    <ul className="list-disc list-inside space-y-1 font-body text-foreground text-sm">
+                      {project.description.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            {/* Extracurricular Activities */}
+            <section className="mb-10">
+              <h3 className="font-display text-xl font-semibold text-primary mb-6 flex items-center gap-2">
+                <span className="w-8 h-0.5 bg-gold"></span>
+                Extracurricular Activities
+              </h3>
+              <div className="space-y-4">
+                {extracurriculars.map((activity, index) => (
+                  <div key={index} className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 p-4 bg-secondary rounded-lg">
+                    <div className="flex-grow">
+                      <h4 className="font-body font-semibold text-foreground">{activity.role}</h4>
+                      <p className="font-body text-accent text-sm">{activity.org}</p>
+                      <p className="font-body text-muted-foreground text-sm">{activity.desc}</p>
+                    </div>
+                    <span className="font-body text-sm text-gold whitespace-nowrap">{activity.period}</span>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Achievements */}
+            <section className="mb-10">
+              <h3 className="font-display text-xl font-semibold text-primary mb-4 flex items-center gap-2">
+                <span className="w-8 h-0.5 bg-gold"></span>
+                Achievements & Awards
+              </h3>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {achievements.map((achievement, index) => (
+                  <li key={index} className="flex items-center gap-2 font-body text-foreground text-sm">
+                    <span className="w-2 h-2 rounded-full bg-gold flex-shrink-0"></span>
+                    {achievement}
+                  </li>
+                ))}
+              </ul>
             </section>
 
             {/* Certifications */}
