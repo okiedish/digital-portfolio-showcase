@@ -7,6 +7,7 @@ const Navigation = () => {
 
   const navLinks = [
     { path: "/", label: "Home" },
+    { path: "/biodata", label: "Bio Data" },
     { path: "/resume", label: "Resume" },
     { path: "/skills", label: "Skills" },
     { path: "/contact", label: "Contact" },

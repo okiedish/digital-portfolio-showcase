@@ -13,8 +13,8 @@ const Footer = () => {
               <span className="text-gold">J</span>ohn Doe
             </h3>
             <p className="text-primary-foreground/80 font-body text-sm leading-relaxed">
-              Senior Software Engineer crafting elegant solutions 
-              for complex problems since 2015.
+              Computer Science student at Stanford University, passionate about 
+              building innovative solutions and learning new technologies.
             </p>
           </div>
 
@@ -25,6 +25,11 @@ const Footer = () => {
               <li>
                 <Link to="/" className="text-primary-foreground/80 hover:text-gold transition-colors">
                   Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/biodata" className="text-primary-foreground/80 hover:text-gold transition-colors">
+                  Bio Data
                 </Link>
               </li>
               <li>

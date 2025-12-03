@@ -3,42 +3,42 @@ import Footer from "@/components/Footer";
 
 const Skills = () => {
   const technicalSkills = [
-    { name: "JavaScript/TypeScript", level: 95 },
-    { name: "React/Next.js", level: 92 },
-    { name: "Node.js/Express", level: 90 },
-    { name: "Python", level: 85 },
-    { name: "AWS/Cloud Services", level: 88 },
-    { name: "PostgreSQL/MongoDB", level: 87 },
-    { name: "Docker/Kubernetes", level: 82 },
-    { name: "GraphQL", level: 80 },
+    { name: "JavaScript/TypeScript", level: 85 },
+    { name: "React/Next.js", level: 82 },
+    { name: "Python", level: 88 },
+    { name: "HTML/CSS", level: 90 },
+    { name: "Node.js/Express", level: 75 },
+    { name: "SQL/Databases", level: 78 },
+    { name: "Git/GitHub", level: 85 },
+    { name: "Java", level: 72 },
   ];
 
   const softSkills = [
-    "Team Leadership",
-    "Project Management",
-    "Agile/Scrum",
-    "Communication",
     "Problem Solving",
-    "Mentoring",
-    "Strategic Planning",
-    "Client Relations",
+    "Team Collaboration",
+    "Communication",
+    "Time Management",
+    "Critical Thinking",
+    "Adaptability",
+    "Leadership",
+    "Creativity",
   ];
 
   const tools = [
     { name: "VS Code", icon: "💻" },
     { name: "Git/GitHub", icon: "🔀" },
-    { name: "Jira", icon: "📋" },
     { name: "Figma", icon: "🎨" },
     { name: "Postman", icon: "📮" },
-    { name: "Slack", icon: "💬" },
-    { name: "Jenkins", icon: "⚙️" },
-    { name: "Terraform", icon: "🏗️" },
+    { name: "Docker", icon: "🐳" },
+    { name: "Linux", icon: "🐧" },
+    { name: "MongoDB", icon: "🍃" },
+    { name: "Firebase", icon: "🔥" },
   ];
 
   const languages = [
     { name: "English", level: "Native" },
-    { name: "Spanish", level: "Professional" },
-    { name: "French", level: "Conversational" },
+    { name: "Spanish", level: "Intermediate" },
+    { name: "French", level: "Basic" },
   ];
 
   return (
@@ -51,7 +51,7 @@ const Skills = () => {
           <div className="max-w-6xl mx-auto text-center animate-fade-in-up">
             <h1 className="section-title mb-2">My <span className="gold-accent">Skills</span></h1>
             <p className="section-subtitle max-w-2xl mx-auto">
-              A comprehensive overview of my technical expertise and professional capabilities
+              A comprehensive overview of my technical expertise and capabilities
             </p>
           </div>
         </section>
@@ -67,7 +67,7 @@ const Skills = () => {
               {technicalSkills.map((skill, index) => (
                 <div 
                   key={skill.name}
-                  className={`animate-fade-in-up bg-card p-6 rounded-lg shadow-card border border-border hover:border-gold transition-colors`}
+                  className="animate-fade-in-up bg-card p-6 rounded-lg shadow-card border border-border hover:border-gold transition-colors"
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
                   <div className="flex justify-between items-center mb-3">
@@ -97,7 +97,7 @@ const Skills = () => {
                   Soft Skills
                 </h2>
                 <div className="grid grid-cols-2 gap-4">
-                  {softSkills.map((skill, index) => (
+                  {softSkills.map((skill) => (
                     <div 
                       key={skill}
                       className="flex items-center gap-3 p-4 bg-card rounded-lg border border-border hover:border-gold hover:shadow-card transition-all"
@@ -116,7 +116,7 @@ const Skills = () => {
                   Tools & Technologies
                 </h2>
                 <div className="grid grid-cols-2 gap-4">
-                  {tools.map((tool, index) => (
+                  {tools.map((tool) => (
                     <div 
                       key={tool.name}
                       className="flex items-center gap-3 p-4 bg-card rounded-lg border border-border hover:border-gold hover:shadow-card transition-all"
@@ -156,28 +156,28 @@ const Skills = () => {
           </div>
         </section>
 
-        {/* Experience Highlights */}
+        {/* Academic Highlights */}
         <section className="px-6 py-16 bg-primary">
           <div className="max-w-6xl mx-auto">
             <h2 className="font-display text-2xl font-semibold text-primary-foreground mb-12 text-center">
-              Key Highlights
+              Academic Highlights
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  icon: "🚀",
-                  title: "40% Latency Reduction",
-                  description: "Optimized database queries and implemented caching strategies",
+                  icon: "🎓",
+                  title: "3.9 GPA",
+                  description: "Maintaining excellent academic standing at Stanford University",
                 },
                 {
-                  icon: "👥",
-                  title: "Team of 8 Engineers",
-                  description: "Successfully led development teams in agile environment",
+                  icon: "🏆",
+                  title: "5+ Hackathons",
+                  description: "Participated and won prizes in multiple coding competitions",
                 },
                 {
-                  icon: "📈",
-                  title: "2M+ Daily Users",
-                  description: "Built APIs serving millions of active users daily",
+                  icon: "💻",
+                  title: "15+ Projects",
+                  description: "Built diverse projects from web apps to machine learning models",
                 },
               ].map((highlight, index) => (
                 <div 
